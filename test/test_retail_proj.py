@@ -15,7 +15,7 @@ def test_read_orders_df(spark):
     assert orders_count == 68884
 
 
-@pytest.mark.transformation
+# @pytest.mark.transformation()
 def test_filter_closed_orders(spark):
     orders_df = read_orders(spark, 'LOCAL')
     filtered_count = filter_closed_orders(orders_df).count()
